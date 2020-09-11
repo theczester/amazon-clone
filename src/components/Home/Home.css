@@ -13,6 +13,14 @@
     margin-right: 5px;
 }
 
+.home__row > * {
+    transition: transform 0.8s;
+}
+
+.home__row > :hover {
+    transform: scale(1.05)
+}
+
 .home__image {
     width: 100%;
     z-index: -1;

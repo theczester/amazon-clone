@@ -27,15 +27,18 @@
     color: #111;
 }
 
+.product > button:hover {
+    cursor: pointer;
+    background: #cea439;
+}
+
 .product__price {
     margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 .product__info {
+    width: 100%;
     height: 100px;
     margin-bottom: 15px;
-}
-
-.product__rating {
-    display: flex;
 }

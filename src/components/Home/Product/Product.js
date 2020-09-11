@@ -1,11 +1,12 @@
 import React from 'react'
 import './Product.css'
 import { useStateValue } from '../../../utilities/StateProvider'
+import StarRatings from 'react-star-ratings';
 
 function Product({ id, title, image, price, rating}) {
 
     const [{ basket }, dispatch] = useStateValue();
-    console.log(basket)
+
     const addToBasket = () => {
         dispatch({
             type: 'ADD_TO_BASKET',
@@ -27,10 +28,14 @@ function Product({ id, title, image, price, rating}) {
                     <small>$</small>
                     <strong>{price}</strong>
                 </p>
-                <div className="product__rating">
-                    {Array(rating).fill().map((_) => (
-                        <p>⭐</p>
-                    ))}
+                <div>
+                    <StarRatings
+                        starSpacing="5px"
+                        starDimension="20px"
+                        rating={rating}
+                        starRatedColor="#f0f00e"
+                        numberOfStars={5}
+                    />
                 </div>
             </div>
             <img src={image} />

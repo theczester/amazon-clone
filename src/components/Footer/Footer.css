@@ -1,0 +1,50 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #232F3E;
+    width: 100%;
+    padding-bottom: 20px;
+    margin-top: 20px;
+    color: white;
+}
+
+.footer > button {
+    color: white;
+    border: none;
+    height: 49px;
+    background: #37475A;
+    width: 100%;
+}
+
+.footer > button:hover {
+    cursor: pointer;
+    background: #425469;
+}
+
+.footer__container {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.footer__row:not(:last-child) {
+    margin-right: 100px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    font-weight: lighter;
+    margin-top: 10px;
+}
+
+li:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.footer__title {
+    font-size: larger;
+}
