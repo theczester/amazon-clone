@@ -3,7 +3,7 @@ import './CheckoutProduct.css';
 import { useStateValue } from '../../../utilities/StateProvider';
 import StarRatings from 'react-star-ratings';
 
-function CheckoutProduct({ id, image, title, price, rating }) {
+function CheckoutProduct({ id, image, title, price, rating, hideButton }) {
 
     const [{ basket }, dispatch] = useStateValue();
 
@@ -38,7 +38,9 @@ function CheckoutProduct({ id, image, title, price, rating }) {
                         numberOfStars={5}
                     />
                 </div>
-                <button onClick={handleRemove}>Remove from Basket</button>
+                {!hideButton && (
+                    <button onClick={handleRemove}>Remove from Basket</button>
+                )}
             </div>
         </div>
     )
